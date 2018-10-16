@@ -153,10 +153,21 @@ class RocketTest < Minitest::Test
   end
 
   def test_check_flying_initialize
+    @my_rocket = Rocket.new(flying: true)
+    actual = @my_rocket.flying?
+    expected = true
+
+    assert_equal(expected,actual)
 
   end
 
   def test_check_flying_default
+
+    @my_rocket = Rocket.new
+    actual = @my_rocket.flying?
+    expected = false
+
+    assert_equal(expected,actual)
 
   end
 
